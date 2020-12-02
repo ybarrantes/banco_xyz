@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "BancoXYZ.Sockets.Server": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "BUFFER_SIZE": "1024",
+        "SERVER_IP": "127.0.0.1",
+        "DB_STRING_CONNECTION": "server=localhost; database=banco_xyz; uid=root; pwd=root;",
+        "SERVER_MAX_CONNECTIONS": "10",
+        "SERVER_PORT": "1012"
+      }
+    }
+  }
+}

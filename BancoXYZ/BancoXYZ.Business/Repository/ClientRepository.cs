@@ -8,7 +8,7 @@ using BancoXYZ.Business.Exceptions;
 namespace BancoXYZ.Business.Repository
 {
     public class ClientRepository : MySqlDbConnection
-    {        
+    {
         public ClientRepository(string connectionString)
             : base(connectionString)
         { }

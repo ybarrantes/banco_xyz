@@ -129,13 +129,6 @@ namespace BancoXYZ.Sockets
             }
         }
 
-        /*public void SendMessage(Socket socket, Response response)
-        {
-            string data = JsonConvert.SerializeObject(response);
-            byte[] byteData = Encoding.ASCII.GetBytes(data);
-            socket.BeginSend(byteData, 0, byteData.Length, SocketFlags.None, new AsyncCallback(SendCallback), socket);
-        }*/
-
         public void SendMessage(Socket socket, string message)
         {
             try

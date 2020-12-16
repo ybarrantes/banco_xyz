@@ -3,8 +3,8 @@
     public enum CommandType
     {
         None,
-        GetDateTime,
         CloseConnection,
-        Client
+        Client,
+        Transaction
     }
 }

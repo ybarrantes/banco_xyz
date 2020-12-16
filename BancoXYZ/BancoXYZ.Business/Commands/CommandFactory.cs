@@ -14,9 +14,13 @@ namespace BancoXYZ.Business.Commands
             switch (request.Command)
             {
                 case CommandType.Client:
-                    ClientRepository clientRepository = new ClientRepository(dbStrConnection);
-                    ClientBusiness clientBusiness = new ClientBusiness(clientRepository);
+                    var clientRepository = new ClientRepository(dbStrConnection);
+                    var clientBusiness = new ClientBusiness(clientRepository);
                     return new ClienteCommand(clientBusiness, request);
+                case CommandType.Transaction:
+                    var transactionRepository = new TransactionRepository(dbStrConnection);
+                    var transactionBusiness = new TransactionBusiness(transactionRepository);
+                    return new TransactionCommand(transactionBusiness, request);
                 default:
                     throw new NotImplementedException($"Command {request.Command} is not supported!!");
             }
